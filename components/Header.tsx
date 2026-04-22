@@ -17,8 +17,8 @@ export function Header() {
                 <Image 
                 src="/LogoSeplan.svg"
                 alt="Logo Seplan piaui"
-                width={130}
-                height={30}
+                width={200}
+                height={40}
                 />
           </Group>
         </Container>
@@ -43,14 +43,14 @@ export function Header() {
               <Text size="sm" fw={600} c="gray.7" style={{ cursor: 'pointer' }}>Governança</Text>
             </Group>
 
-            <Button>
+            <Button radius="md" size="sm">
               Acesso Exclusivo Servidor
             </Button>
 
           </Group>
         </Container>
       </Box>
-
+      
     </header>
   );
 }
