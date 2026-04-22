@@ -3,6 +3,8 @@ import { Figtree } from "next/font/google";
 import "@mantine/core/styles.css";
 import "./globals.css";
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -49,14 +51,15 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className="min-h-full flex flex-col">
-        <MantineProvider theme={theme}>
-          
-          {}
+               <MantineProvider theme={theme}>
           <Header />
-
-          {}
-          {children}
           
+          <main style={{ flex: 1 }}>
+            {children}
+          </main>
+          
+          {/* O Rodapé fecha a estrutura */}
+          <Footer />
         </MantineProvider>
       </body>
       

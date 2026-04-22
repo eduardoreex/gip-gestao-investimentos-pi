@@ -199,6 +199,45 @@ export default function Home() {
           </Group>
         </Container>
       </Box>
+    
+      <Box component="section" pt={80} pb={128} bg="primary.0">
+        <Container size="xl">
+          <Paper 
+            radius="lg" 
+            p={64} 
+            bg="white" 
+            withBorder 
+            style={{ 
+              textAlign: 'center',
+              boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' 
+            }}
+          >
+            <Stack gap="xl" align="center">
+              <Title 
+                order={2} 
+                className="text-emphasis"
+                style={{ fontSize: '36px', fontWeight: 700 }}
+              >
+                Conheça o Banco de Projetos
+              </Title>
+
+              <Text 
+                className="text-default" 
+                maw={720} 
+                style={{ fontSize: '18px', fontWeight: 500, lineHeight: '140%' }}
+              >
+                Acesse a ferramenta oficial onde todos os projetos de investimento do estado 
+                são cadastrados, analisados e monitorados. Transparência total para o gestor 
+                e para o cidadão.
+                
+              </Text>
+              <Button size="xl" radius="md" px={48}>
+                Acessar Banco de Projetos
+              </Button>
+            </Stack>
+          </Paper>
+        </Container>
+      </Box>
     </main>
   );
 }
