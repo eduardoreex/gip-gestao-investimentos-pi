@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Cores Primárias do Piauí conforme o Guia de Estilo
+  
         primary: {
           50: "#EDF8FD",
           100: "#DBEDF5",
@@ -23,13 +23,12 @@ const config: Config = {
           800: "#003F5B",
           900: "#063246",
         },
-        // Cores Neutras (Zinc - Tailwind Base) exigidas no projeto
-        emphasis: "#18181B", // Zinc/900
-        default: "#52525B",  // Zinc/600
-        muted: "#A1A1AA",    // Zinc/400
+      
+        emphasis: "#18181B", 
+        default: "#52525B",
+        muted: "#A1A1AA",
       },
       fontFamily: {
-        // Define a fonte Figtree (Google Fonts) exigida no guia
         sans: ["var(--font-figtree)", "ui-sans-serif", "system-ui"],
       },
     },

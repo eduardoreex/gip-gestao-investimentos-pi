@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "@mantine/core/styles.css";
 import "./globals.css";
+import { Header } from "../components/Header";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -48,9 +49,15 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className="min-h-full flex flex-col">
-        {}
         <MantineProvider theme={theme}>
+          
+          {/* INSTALAMOS O CABEÇALHO AQUI! 
+              Como ele está acima do {children}, ele sempre aparecerá no topo do site */}
+          <Header />
+
+          {/* O {children} agora empurra o restante do conteúdo para baixo do cabeçalho */}
           {children}
+          
         </MantineProvider>
       </body>
     </html>
