@@ -1,4 +1,4 @@
-import { Box,  Container, Title , Text , Button , Group , Stack } from '@mantine/core'
+import { Box,  Container, Title , Text , Button , Group , Stack, SimpleGrid , Paper} from '@mantine/core'
 export default function Home() {
   return (
     <main>
@@ -73,6 +73,75 @@ export default function Home() {
             </Stack>
 
           </Group>
+        </Container>
+      </Box>
+      <Box component="section" py={80} bg="gray.0">
+        <Container size="xl">
+          <Stack gap="xl">
+            
+            <Title 
+              order={2} 
+              className="text-emphasis"
+              style={{ fontSize: '36px', fontWeight: 700, textAlign: 'center' }}
+            >
+              As 6 Etapas do Ciclo GIP
+            </Title>
+
+            <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg" verticalSpacing="lg">
+              
+              <Paper shadow="sm" p="xl" radius="md" withBorder>
+                <Text fw={700} size="xl"  c="gip-blue.6" mb="xs">01</Text>
+                <Title order={3} size="22px" mb="sm" className="text-emphasis">Planejamento</Title>
+                <Text size="sm" className="text-default">
+                  Identificação de demandas estratégicas e alinhamento com o plano de governo.
+                </Text>
+              </Paper>
+
+              <Paper shadow="sm" p="xl" radius="md" withBorder>
+                <Text fw={700} size="xl"  c="gip-blue.6" mb="xs">02</Text>
+                <Title order={3} size="22px" mb="sm" className="text-emphasis">Seleção e Priorização</Title>
+                <Text size="sm" className="text-default">
+                  Análise técnica e escolha dos projetos com maior impacto social e econômico.
+                </Text>
+              </Paper>
+
+              <Paper shadow="sm" p="xl" radius="md" withBorder>
+                <Text fw={700} size="xl"  c="gip-blue.6" mb="xs">03</Text>
+                <Title order={3} size="22px" mb="sm" className="text-emphasis">Monitoramento</Title>
+                <Text size="sm" className="text-default">
+                  Acompanhamento em tempo real da execução física e financeira das obras.
+                </Text>
+              </Paper>
+
+            
+            
+              <Paper shadow="sm" p="xl" radius="md" withBorder>
+                <Text fw={700} size="xl"  c="gip-blue.6" mb="xs">04</Text>
+                <Title order={3} size="22px" mb="sm" className="text-emphasis">Avaliação</Title>
+                <Text size="sm" className="text-default">
+                  Verificação dos resultados e impactos gerados pelos projetos.
+                </Text>
+              </Paper>
+              
+              <Paper shadow="sm" p="xl" radius="md" withBorder>
+                <Text fw={700} size="xl" c="gip-blue.6" mb="xs">05</Text>
+                <Title order={3} size="22px" mb="sm" className="text-emphasis">Transparência</Title>
+                <Text size="sm" className="text-default">
+                  Disponibilização das informações para a população
+                </Text>
+              </Paper>
+
+              <Paper shadow="sm" p="xl" radius="md" withBorder>
+                <Text fw={700} size="xl" c="gip-blue.6" mb="xs">06</Text>
+                <Title order={3} size="22px" mb="sm" className="text-emphasis">Otimização</Title>
+                <Text size="sm" className="text-default">
+                  Aprimoramento contínuo das ações com base em dados, indicadores e resultados obtidos.
+                </Text>
+              </Paper>
+
+
+            </SimpleGrid>
+          </Stack>
         </Container>
       </Box>
     </main>
