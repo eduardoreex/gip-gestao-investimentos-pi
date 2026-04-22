@@ -144,6 +144,61 @@ export default function Home() {
           </Stack>
         </Container>
       </Box>
+
+      <Box component="section" py={80} bg="white">
+        <Container size="xl" px={80}>
+          <Group align="center" gap={70}>
+            
+            <Box style={{ flex: 1, position: 'relative', height: '400px' }}>
+               <Box 
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  backgroundColor: '#EDF8FD',
+                  borderRadius: '24px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Text c="primary.6" fw={600}>Gráfico de Governança</Text>
+              </Box>
+            </Box>
+
+            <Stack gap="xl" style={{ flex: 1 }}>
+              <Title 
+                order={2} 
+                className="text-emphasis"
+                style={{ fontSize: '36px', fontWeight: 700 }}
+              >
+                Estrutura de Governança
+              </Title>
+              
+              <Text className="text-default" style={{ fontSize: '18px', fontWeight: 500 }}>
+                A governança do GIP garante que cada projeto passe por uma análise rigorosa 
+                de comitês técnicos, assegurando transparência e a melhor aplicação 
+                dos recursos públicos
+              </Text>
+
+              <Stack gap="sm">
+                <Group gap="sm">
+                  <Text fw={700} c="primary.6">✓</Text>
+                  <Text size="sm" fw={500} className="text-default">Transparência total nos investimentos </Text>
+                </Group>
+                <Group gap="sm">
+                  <Text fw={700} c="primary.6">✓</Text>
+                  <Text size="sm" fw={500} className="text-default">Monitoramento técnico contínuo </Text>
+                </Group>
+                <Group gap="sm">
+                  <Text fw={700} c="primary.6">✓</Text>
+                  <Text size="sm" fw={500} className="text-default">Alinhamento com o Plano de Governo </Text>
+                </Group>
+              </Stack>
+            </Stack>
+
+          </Group>
+        </Container>
+      </Box>
     </main>
   );
 }
