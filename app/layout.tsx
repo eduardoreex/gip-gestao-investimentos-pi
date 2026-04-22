@@ -51,11 +51,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <MantineProvider theme={theme}>
           
-          {/* INSTALAMOS O CABEÇALHO AQUI! 
-              Como ele está acima do {children}, ele sempre aparecerá no topo do site */}
+          {}
           <Header />
 
-          {/* O {children} agora empurra o restante do conteúdo para baixo do cabeçalho */}
+          {}
           {children}
           
         </MantineProvider>
