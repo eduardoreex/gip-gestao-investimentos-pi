@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "@mantine/core/styles.css";

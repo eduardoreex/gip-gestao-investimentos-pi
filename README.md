@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ GIP - Gestão do Investimento Público do Piauí
 
-## Getting Started
+- Landing Page responsiva desenvolvida como resolução do desafio técnico para a vaga de Estágio em Desenvolvimento Front-end na SEPLAN-PI.
 
-First, run the development server:
+O objetivo deste projeto é apresentar de forma clara, moderna e acessível a metodologia do GIP, destacando suas etapas, governança e ferramentas, seguindo rigorosamente o Guia de Estilo (Figma) fornecido pela Diretoria de Tecnologia e Inovação (DITI).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A arquitetura do projeto foi desenhada focando em *Performance (SSR)*, *Consistência Visual* e *Manutenibilidade*:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*Next.js 14 (App Router):* Escolhido pelo poder do Server-Side Rendering (SSR), garantindo carregamento instantâneo da página e otimização de SEO para motores de busca.
+*Mantine UI v7:* Utilizado como motor de Design System. Todos os tokens de cor, tipografia e espaçamentos do Guia de Estilo foram injetados na raiz do projeto (`MantineProvider`).
+*Tailwind CSS:* Utilizado para manipulações de layout de baixo nível e utilitários de posicionamento rápido.
+*TypeScript:* Garantindo tipagem estática, auto-complete previsível e zero bugs de compilação.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Decisões de Engenharia e Destaques
 
-## Learn More
+1.  **Arquitetura Mobile-First sem Media Queries:** Em vez de poluir o código com arquivos CSS externos, a responsividade foi aplicada diretamente nas props dos componentes do Mantine (ex: `fz={{ base: 32, lg: 64 }}` e `SimpleGrid cols={{ base: 1, md: 2 }}`), garantindo uma transição fluida entre celular, tablet e desktop.
+2.  **Centralização de Design Tokens:** A paleta `gip-blue` (Primary) e os tons neutros de Zinc foram mapeados do Figma para o `createTheme`. Isso automatizou os estados de *hover* e *active* de botões sem necessidade de CSS manual.
+3.  **Otimização de Fontes e Assets:** A fonte oficial **Figtree** foi implementada via `next/font/google` para *self-hosting*, eliminando requisições externas e melhorando o Cumulative Layout Shift (CLS). Ícones simples (como a lupa) foram desenhados in-line em SVG para reduzir o *bundle size*.
+4.  **Componentização Isolada:** Header e Footer foram extraídos para a pasta `/components` para garantir uma base de código limpa no `page.tsx` e facilitar a escalabilidade futura.
 
-To learn more about Next.js, take a look at the following resources:
+## Como rodar o projeto localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Siga os passos abaixo para testar a aplicação na sua máquina:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone o repositório
 
-## Deploy on Vercel
+git clone [https://github.com/eduardoreex/gip-gestao-investimentos-pi.git](https://github.com/eduardoreex/gip-gestao-investimentos-pi.git)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Acesse a pasta do projeto
+Bash
+cd gip-gestao-investimentos-pi
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Instale as dependências
+Bash
+npm install
+
+4. Inicie o servidor de desenvolvimento
+Bash
+npm run 
+
+5. Acesse no navegador
+Abra http://localhost:3000 no seu navegador para ver o resultado.
+
+Desenvolvido por Eduardo Oliveira.

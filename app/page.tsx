@@ -40,8 +40,6 @@ export default function Home() {
           </Stack>
         </Container>
       </Box>
-
-  
       <Box bg="white" pt={{ base: 64, md: 96, lg: 128 }} pb={{ base: 32, md: 48, lg: 80 }}> 
         <Container size="xl" px={{ base: 20, md: 32, lg: 80 }}>
          

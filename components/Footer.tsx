@@ -24,7 +24,6 @@ export function Footer() {
               </Text>
             </Stack>
 
-
             <Group gap={60} align="flex-start">
               <Stack gap="xs">
                 <Text fw={700} size="sm" mb={10}>Institucional</Text>
