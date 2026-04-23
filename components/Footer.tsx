@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    // bg="#18181B" é o tom 'emphasis' (Zinc 900) exigido no PDF
+  
     <Box component="footer" bg="#18181B" pt={80} pb={128} c="white">
       <Container size="xl">
         <Stack gap={40}>
           
           <Group justify="space-between" align="flex-start">
-            {/* Lado Esquerdo: Logo e Descrição */}
+          
             <Stack gap="md" style={{ maxWidth: 300 }}>
               <Image 
                 src="/LogoSeplan.svg" 
@@ -24,7 +24,7 @@ export function Footer() {
               </Text>
             </Stack>
 
-            {/* Centro: Links de Navegação */}
+
             <Group gap={60} align="flex-start">
               <Stack gap="xs">
                 <Text fw={700} size="sm" mb={10}>Institucional</Text>
@@ -41,7 +41,6 @@ export function Footer() {
               </Stack>
             </Group>
 
-            {/* Lado Direito: Contato */}
             <Stack gap="xs">
               <Text fw={700} size="sm" mb={10}>Contato</Text>
               <Text size="xs" c="gray.5">Av. Pedro Freitas, S/N - Centro Administrativo</Text>
@@ -52,13 +51,13 @@ export function Footer() {
 
           <Divider color="gray.8" />
 
-          {/* Rodapé do Rodapé: Copyright */}
+       
           <Group justify="space-between">
             <Text size="xs" c="gray.6">
               © 2026 SEPLAN - Governo do Estado do Piauí. Todos os direitos reservados.
             </Text>
             <Group gap="md">
-              {/* Espaço para ícones de redes sociais no futuro */}
+            
               <Text size="xs" c="gray.6" style={{ cursor: 'pointer' }}>Instagram</Text>
               <Text size="xs" c="gray.6" style={{ cursor: 'pointer' }}>YouTube</Text>
             </Group>

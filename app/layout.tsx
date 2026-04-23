@@ -1,11 +1,11 @@
-// app/layout.tsx
+
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "@mantine/core/styles.css";
 import "./globals.css";
 import { Header} from "../components/Header";
 import { Footer } from "../components/Footer";
-import { ColorSchemeScript, MantineProvider, createTheme, virtualColor } from "@mantine/core";
+import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -76,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${figtree.variable} antialiased`}>
+    <html lang="pt-BR" className={`${figtree.variable} antialiased`} suppressHydrationWarning>
       <head>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>

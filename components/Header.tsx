@@ -21,9 +21,8 @@ export function Header() {
       <Box bg="gip-blue.6" py={8}>
         <Container size="xl" px={{ base: 20, md: 32, lg: 80 }}>
           <Group justify="space-between" h={70}>
-            
             <Group gap="lg" visibleFrom="sm">
-              
+
               <Button 
                 variant="white" 
                 color="gip-blue.6" 
@@ -31,9 +30,10 @@ export function Header() {
                 radius="sm"
                 fw={600}
               >
+              
               Site da Seplan
-              </Button>
 
+              </Button>
               <Text size="xs" fw={600} c="white" style={{ cursor: 'pointer' }}>Diálogos</Text>
               <Text size="xs" fw={600} c="white" style={{ cursor: 'pointer' }}>OPA</Text>
               <Text size="xs" fw={600} c="white" style={{ cursor: 'pointer' }}>dadosPI</Text>
@@ -54,36 +54,44 @@ export function Header() {
         </Container>
       </Box>
 
+      
       <Box bg="white" py="md" style={{ borderBottom: '1px solid #E4E4E7' }}>
         <Container size="xl" px={{ base: 20, md: 32, lg: 80 }}>
           <Group justify="space-between" h={64}>
             
+           
             <Image src="/LogoGip.svg" alt="Logo GIP" width={110} height={40}/>
 
-            <Group gap="xl" visibleFrom="lg">
-              <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>O GIP</Text>
-              <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>Etapas</Text>
-              <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>Ferramentas</Text>
-              <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>Governança</Text>
+          
+            <Group gap="xl">
+              
+              <Group gap="xl" visibleFrom="lg">
+                <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>O GIP</Text>
+                <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>Etapas</Text>
+                <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>Ferramentas</Text>
+                <Text size="sm" fw={600} style={{ cursor: 'pointer' }}>Governança</Text>
+              </Group>
+
+              <Group gap="md">
+                <TextInput 
+                  placeholder="O que você procura?"
+                  size="sm"
+                  radius="xl"
+                  leftSection={<SearchIcon />}
+                  visibleFrom="md"
+                  styles={{
+                    input: { backgroundColor: '#f4f4f5', border: 'none' }
+                  }}
+                />
+                <Button radius="md" size="sm" visibleFrom="sm" color="gip-blue.5">
+                  Acesso Exclusivo Servidor
+                </Button>
+                
+                <Burger opened={opened} onClick={toggle} hiddenFrom="lg" size="sm" />
+              </Group>
+
             </Group>
 
-            <Group gap="md">
-              <TextInput 
-                placeholder="O que você procura?"
-                size="sm"
-                radius="xl"
-                leftSection={<SearchIcon />}
-                visibleFrom="md"
-                styles={{
-                  input: { backgroundColor: '#f4f4f5', border: 'none' }
-                }}
-              />
-              <Button radius="md" size="sm" visibleFrom="sm" color="gip-blue.5">
-                Acesso Exclusivo Servidor
-              </Button>
-              
-              <Burger opened={opened} onClick={toggle} hiddenFrom="lg" size="sm" />
-            </Group>
           </Group>
         </Container>
       </Box>
