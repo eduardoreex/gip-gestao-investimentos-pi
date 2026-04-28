@@ -1,6 +1,6 @@
 # 🏛️ GIP - Gestão do Investimento Público do Piauí
 
-- Landing Page responsiva desenvolvida como resolução do desafio técnico para a vaga de Estágio em Desenvolvimento Front-end na SEPLAN-PI.
+- Landing Page Desenvolvimento Front-end na SEPLAN-PI.
 
 O objetivo deste projeto é apresentar de forma clara, moderna e acessível a metodologia do GIP, destacando suas etapas, governança e ferramentas, seguindo rigorosamente o Guia de Estilo (Figma) fornecido pela Diretoria de Tecnologia e Inovação (DITI).
 
